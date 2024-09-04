@@ -1,4 +1,4 @@
-/* Common Styles for Pay Bill Page */
+/* Common Styles for Payment Page */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -52,7 +52,7 @@ body {
     opacity: 0.8;
 }
 
-.bill-section {
+.payment-section {
     max-width: 600px;
     margin: 30px auto;
     padding: 20px;
@@ -61,18 +61,44 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.bill-item {
-    margin-bottom: 15px;
+.payment-section h2 {
+    margin-bottom: 20px;
+}
+
+.payment-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.payment-section label {
+    display: block;
+    margin-top: 10px;
     font-size: 16px;
 }
 
-.total-amount {
-    margin-top: 20px;
-    font-weight: bold;
+.payment-section input[type="number"],
+.payment-section input[type="text"],
+.payment-section select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-button {
+.payment-section button {
     width: calc(50% - 20px);
     padding: 10px;
-    margin: 10px 5p
+    margin: 10px 5px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.payment-section button:hover {
+    opacity: 0.8;
 }

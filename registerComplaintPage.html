@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Management System - Register Complaint</title>
+    <link rel="stylesheet" href="registerComplaintPage.css">
+</head>
+<body>
+    <!-- Top Navigation Menu -->
+    <div class="top-bar">
+        <a href="home.html">Home</a>
+        <a href="pay-bill.html">Pay Bill</a>
+        <a href="register-complaint.html">Register Complaint</a>
+        <a href="complaint-status.html">Complaint Status</a>
+    </div>
+    
+    <!-- Welcome Section -->
+    <div class="welcome-section">
+        <p>Welcome, [Username]</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- Register Complaint Section -->
+    <div class="complaint-section">
+        <h2>Register Complaint/Service</h2>
+        
+        <label for="complaintType">Complaint/Service Type:</label>
+        <select id="complaintType" onchange="updateCategories()">
+            <option value="">Select Complaint Type</option>
+            <option value="billing">Billing Related</option>
+            <option value="voltage">Voltage Related</option>
+            <option value="disruption">Frequent Disruption</option>
+            <option value="street-light">Street Light Related</option>
+            <option value="pole">Pole Related</option>
+        </select>
+        
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="">Select Category</option>
+        </select>
+
+        <label for="contactPerson">Contact Person:</label>
+        <input type="text" id="contactPerson">
+
+        <label for="landmark">Landmark:</label>
+        <input type="text" id="landmark">
+
+        <label for="consumerNo">Consumer No:</label>
+        <input type="text" id="consumerNo" maxlength="13">
+
+        <label for="problemDescription">Problem Description:</label>
+        <textarea id="problemDescription"></textarea>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" maxlength="10">
+
+        <label for="address">Address:</label>
+        <textarea id="address"></textarea>
+
+        <button onclick="submitComplaint()">Submit Complaint</button>
+        <button onclick="cancelComplaint()">Cancel</button>
+    </div>
+
+    <script src="registerComplaintPage.js"></script>
+</body>
+</html>
