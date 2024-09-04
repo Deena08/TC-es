@@ -1,0 +1,52 @@
+/* CSS for Home Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-bar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.top-bar a:hover {
+    background-color: #575757;
+}
+
+.welcome-section {
+    padding: 20px;
+    text-align: right;
+    background-color: #e9ecef;
+}
+
+.welcome-section p {
+    display: inline;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.welcome-section button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.welcome-section button:hover {
+    opacity: 0.8;
+}

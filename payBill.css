@@ -1,0 +1,63 @@
+/* CSS for Pay Bill Page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-bar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.top-bar a:hover {
+    background-color: #575757;
+}
+
+.bill-section {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.total-amount {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+}

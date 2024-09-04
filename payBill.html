@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Bill - Electricity Management System</title>
+    <link rel="stylesheet" href="payBill.css">
+</head>
+<body>
+    <div class="top-bar">
+        <a href="homePage.html">Home</a>
+        <a href="payBill.html">Pay Bill</a>
+        <a href="register-complaint.html">Register Complaint</a>
+        <a href="complaint-status.html">Complaint Status</a>
+    </div>
+
+    <div class="bill-section">
+        <h2>Pay Your Bills</h2>
+        <form id="billForm">
+            <div class="bill-item">
+                <input type="checkbox" id="bill1" name="bill" value="100" onclick="updateTotal()">
+                <label for="bill1">Bill #1 - $100</label>
+            </div>
+            <div class="bill-item">
+                <input type="checkbox" id="bill2" name="bill" value="200" onclick="updateTotal()">
+                <label for="bill2">Bill #2 - $200</label>
+            </div>
+            <div class="bill-item">
+                <input type="checkbox" id="bill3" name="bill" value="150" onclick="updateTotal()">
+                <label for="bill3">Bill #3 - $150</label>
+            </div>
+
+            <div class="total-amount">Total Amount: $<span id="total">0</span></div>
+
+            <button type="button" onclick="proceedToPay()">Proceed to Pay</button>
+        </form>
+    </div>
+
+    <script>
+        function updateTotal() {
+            const checkboxes = document.querySelectorAll('input[name="bill"]:checked');
+            let total = 0;
+            checkboxes.forEach((checkbox) => {
+                total += parseFloat(checkbox.value);
+            });
+            document.getElementById('total').textContent = total.toFixed(2);
+        }
+
+        function proceedToPay() {
+            if (parseFloat(document.getElementById('total').textContent) > 0) {
+                alert('Proceeding to Payment...');
+                window.location.href = 'payment.html';
+            } else {
+                alert('Please select at least one bill to pay.');
+            }
+        }
+    </script>
+</body>
+</html>

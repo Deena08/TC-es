@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Management System - Login</title>
+    <link rel="stylesheet" href="loginPage.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Login</h2>
+        <form id="loginForm">
+            <label for="userId">User ID:</label>
+            <input type="text" id="userId" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            const userId = document.getElementById("userId").value;
+            const password = document.getElementById("password").value;
+            
+            // For demo, we'll assume any input is valid.
+            if (userId && password) {
+                // Navigate to home page
+                window.location.href = "home.html";
+            } else {
+                alert("Please enter both User ID and Password.");
+            }
+        }
+    </script>
+</body>
+</html>
