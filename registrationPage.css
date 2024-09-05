@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    max-width: 400px;
+    max-width: 900px;
     margin: 50px auto;
     background: #fff;
     padding: 20px;
@@ -14,27 +14,32 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+h1, h3 {
     text-align: center;
     color: #333;
 }
 
 label {
-    display: block;
     margin-bottom: 5px;
     color: #555;
+    display: block;
 }
 
 input, select {
-    width: calc(100% - 20px);
     padding: 8px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    width: 94%; /* Set a fixed width for all input fields */
+    box-sizing: border-box;
+}
+
+#confirmPassword {
+    width: 46%;
 }
 
 button {
-    width: calc(50% - 10px);
+    width: calc(30% - 10px);
     padding: 10px;
     margin: 10px 5px 0 5px;
     border: none;
@@ -61,5 +66,36 @@ button:hover {
     background-color: #e7f9ed;
     color: #28a745;
     border-radius: 4px;
-    text-align: center;
+    text-align: left;
 }
+
+.innerContainer1, .innerContainer2, .innerContainer3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between fields */
+    justify-content: space-between;
+}
+
+.innerContainer1 > div,
+.innerContainer2 > div,
+.innerContainer3 > div {
+    flex: 1 1 45%; /* Each field takes up about half the width */
+    min-width: 250px;
+}
+
+#star {
+    color: red;
+}
+
+#headings {
+    text-align: left;
+}
+#black{
+    color: black;
+    text-align: left;
+}
+
+#sucessfullMessage{
+    color: #28a745;
+}
+

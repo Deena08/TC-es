@@ -8,53 +8,74 @@
 </head>
 <body>
     <div class="container">
-        <h2>Customer Registration</h2>
+        <h1>Customer Registration</h1>
         <form id="registrationForm">
-            <label for="consumerId">Consumer ID (13-digit):</label>
-            <input type="text" id="consumerId" maxlength="13" required><br>
 
-            <label for="billNumber">Bill Number (Last 5 digits):</label>
-            <input type="text" id="billNumber" maxlength="5" required><br>
+            <h3 id="headings">Consumer Details</h3>
+            <div class="innerContainer1">
+                <div>
+                    <label for="consumerId"><span id="star">*</span>Consumer ID:</label>
+                    <input type="text" id="consumerId" maxlength="13" required>
+                </div>
+                <div>
+                    <label for="billNumber"><span id="star">*</span>Bill Number:</label>
+                    <input type="text" id="billNumber" maxlength="5" required>
+                </div>
+            </div>
 
-            <label for="title">Title:</label>
-            <select id="title" required>
-                <option value="">Select</option>
-                <option value="Mr.">Mr.</option>
-                <option value="Mrs.">Mrs.</option>
-                <option value="Ms.">Ms.</option>
-                <option value="Dr.">Dr.</option>
-            </select><br>
+            <h3 id="headings">User Details</h3>
+            <div class="innerContainer2">
+                <div>
+                    <label for="title"><span id="star">*</span>Title:</label>
+                    <select id="title" required>
+                        <option value="">Select</option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                        <option value="Ms.">Ms.</option>
+                        <option value="Dr.">Dr.</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="customerName"><span id="star">*</span>Customer Name:</label>
+                    <input type="text" id="customerName" maxlength="50" required>
+                </div>
+                <div>
+                    <label for="email"><span id="star">*</span>Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div>
+                    <label for="countryCode"><span id="star">*</span>Country Code:</label>
+                    <select id="countryCode">
+                        <option value="+1">+1 (US)</option>
+                        <option value="+91">+91 (IN)</option>
+                    </select>
+                    <input type="text" id="mobileNumber" maxlength="10" required placeholder="Mobile Number">
+                </div>
+            </div>
 
-            <label for="customerName">Customer Name:</label>
-            <input type="text" id="customerName" maxlength="50" required><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required><br>
-
-            <label for="countryCode">Country Code:</label>
-            <select id="countryCode">
-                <option value="+1">+1 (US)</option>
-                <option value="+91">+91 (IN)</option>
-                <!-- Add more country codes as needed -->
-            </select>
-            <input type="text" id="mobileNumber" maxlength="10" required placeholder="Mobile Number"><br>
-
-            <label for="userId">User ID:</label>
-            <input type="text" id="userId" minlength="5" maxlength="20" required><br>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" maxlength="30" required><br>
-
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" maxlength="30" required><br>
+            <h3 id="headings">Login Details</h3>
+            <div class="innerContainer3">
+                <div>
+                    <label for="userId"><span id="star">*</span>User ID:</label>
+                    <input type="text" id="userId" minlength="5" maxlength="20" required>
+                </div>
+                <div>
+                    <label for="password"><span id="star">*</span>Password:</label>
+                    <input type="password" id="password" maxlength="30" required>
+                </div>
+                <div>
+                    <label for="confirmPassword"><span id="star">*</span>Confirm Password:</label>
+                    <input type="password" id="confirmPassword" maxlength="30" required>
+                </div>
+            </div>
 
             <button type="button" onclick="registerCustomer()">Register</button>
             <button type="reset">Reset</button>
         </form>
-        
+
         <div id="acknowledgment" class="acknowledgment"></div>
     </div>
 
-    <script src="registratonPage.js"></script>
+    <script src="registrationPage.js"></script>
 </body>
 </html>

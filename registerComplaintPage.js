@@ -50,3 +50,8 @@ function logout() {
     // Redirect to login page
     window.location.href = "loginPage.html";
 }
+
+function submitComplaint() {
+    // Redirect to login page
+    window.location.href = "homePage.html";
+}
