@@ -39,7 +39,10 @@ function submitComplaint() {
 }
 
 function cancelComplaint() {
-    document.querySelector('form').reset();
+    const form = document.getElementById('complaintForm');
+    if (form) {
+        form.reset();
+    }
 }
 
 function generateComplaintID() {
@@ -49,9 +52,4 @@ function generateComplaintID() {
 function logout() {
     // Redirect to login page
     window.location.href = "loginPage.html";
-}
-
-function submitComplaint() {
-    // Redirect to login page
-    window.location.href = "homePage.html";
 }
