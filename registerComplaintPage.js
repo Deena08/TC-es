@@ -5,7 +5,7 @@ function updateCategories() {
     let categories = [];
     switch (complaintType) {
         case 'billing':
-            categories = ['Incorrect Bill Amount', 'Billing for Unused Period'];
+            categories = ['Incorrect Bill Amount', 'Billing for Unused Period'];//
             break;
         case 'voltage':
             categories = ['Low Voltage', 'High Voltage'];
