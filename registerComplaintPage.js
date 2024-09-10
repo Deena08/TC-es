@@ -5,7 +5,7 @@ function updateCategories() {
     let categories = [];
     switch (complaintType) {
         case 'billing':
-            categories = ['Incorrect Bill Amount', 'Billing for Unused Period'];//
+            categories = ['Incorrect Bill Amount', 'Billing for Unused Period'];
             break;
         case 'voltage':
             categories = ['Low Voltage', 'High Voltage'];
@@ -23,7 +23,10 @@ function updateCategories() {
             categories = [];
     }
 
+    // Clear current options
     categorySelect.innerHTML = '<option value="">Select Category</option>';
+    
+    // Populate new options
     categories.forEach(function(category) {
         const option = document.createElement('option');
         option.value = category;
@@ -34,8 +37,6 @@ function updateCategories() {
 
 function submitComplaint() {
     alert("Complaint submitted successfully! Your unique complaint ID is: " + generateComplaintID());
-    // Redirect or display success message
-    // window.location.href = "success.html"; // Example
 }
 
 function cancelComplaint() {
@@ -50,6 +51,5 @@ function generateComplaintID() {
 }
 
 function logout() {
-    // Redirect to login page
     window.location.href = "loginPage.html";
 }
